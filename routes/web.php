@@ -20,6 +20,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', [\App\Http\Controllers\HomeController::class, 'index'])->name('homepage');
 Route::get('signin', [\App\Http\Controllers\UserController::class, 'index'])->name('signin.index');
 Route::post('signin', [\App\Http\Controllers\UserController::class, 'signin'])->name('signin.post');
+Route::get('/logout', [\App\Http\Controllers\UserController::class, 'logout'])->name('logout');
 
 
 

@@ -30,8 +30,9 @@
         <ul class="navbar-nav ml-auto">
             <!-- Navbar Search -->
             <li class="nav-item">
-                <a class="nav-link" data-widget="navbar-search" href="#" role="button">
-                    <i class="fas fa-search"></i>
+                <a href="{{route('homepage')}}" class="nav-link">
+                    <i class="nav-icon fas fa-home fa-2x"></i>
+                </a>
                 </a>
                 <div class="navbar-search-block">
                     <form class="form-inline">
@@ -107,6 +108,13 @@
                         <a href="{{route('groups.index')}}" class="nav-link">
                             <i class="nav-icon fas fa-users text-info"></i>
                             <p>Группы</p>
+                        </a>
+                    </li>
+                    <li class="nav-header">Переход</li>
+                    <li class="nav-item">
+                        <a href="{{route('homepage')}}" class="nav-link">
+                            <i class="nav-icon fas fa-home text-info"></i>
+                            <p>Домашняя страница</p>
                         </a>
                     </li>
                 </ul>

@@ -14,4 +14,8 @@ class Teacher extends Model
         'degree'
     ];
 
+    public function fullname()
+    {
+        return $this->name . ' ' . $this->surname;
+    }
 }

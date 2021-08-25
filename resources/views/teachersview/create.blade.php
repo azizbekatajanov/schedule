@@ -3,7 +3,7 @@
 
     <div class="card card-primary">
         <div class="card-header">
-            <h3 class="card-title">Добавить предмет</h3>
+            <h3 class="card-title">Добавить преподавателя</h3>
         </div>
         <!-- /.card-header -->
         <!-- form start -->

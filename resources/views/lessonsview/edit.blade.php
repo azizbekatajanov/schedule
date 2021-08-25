@@ -7,6 +7,7 @@
         <!-- /.card-header -->
         <!-- form start -->
         <form action="{{route('lessons.update', $lesson->id)}}" method="POST">
+            <input type="hidden" name="id" value='{{$lesson->id}}'>
             @csrf
             @method('PUT')
             <div class="card-bsody">

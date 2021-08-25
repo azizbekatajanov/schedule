@@ -7,6 +7,7 @@
         <!-- /.card-header -->
         <!-- form start -->
         <form action="{{route('groups.update', $group->id)}}" method="POST">
+            <input type="hidden" name="id" value="{{$group->id}}">
             @csrf
             @method('PUT')
             <div class="card-body">

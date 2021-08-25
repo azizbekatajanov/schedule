@@ -24,7 +24,8 @@ class GroupRequest extends FormRequest
     public function rules()
     {
         return [
-            'name'=>'required|max:50|unique:groups,name',
+            'id'=>'nullable',
+            'name'=>'required|max:50|unique:groups,name'.($this->id !== null ? ','.$this->id:''),
             'course'=>'required'
         ];
     }

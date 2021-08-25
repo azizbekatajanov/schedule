@@ -13,8 +13,7 @@
         <thead>
         <tr>
             <th class="col-1">ID</th>
-            <th class="col-4">Имя</th>
-            <th class="col-4">Фамилия</th>
+            <th class="col-4">Ф.И.О</th>
             <th class="col-4">Степень</th>
             <th>Изменить</th>
             <th>Удалить</th>
@@ -24,8 +23,7 @@
         @foreach($teachers as $teacher)
             <tr>
                 <td>{{$teacher->id}}</td>
-                <td>{{$teacher->name}}</td>
-                <td>{{$teacher->surname}}</td>
+                <td>{{$teacher->fullname()}}</td>
                 <td>{{$teacher->degree}}</td>
                 <td>
                     <a class="btn btn-warning" href = "{{ route ('teachers.edit', $teacher->id) }}"><i class="fas fa-edit"></i></a>

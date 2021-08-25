@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\ScheduleRequest;
+use App\Models\Day;
 use App\Models\Group;
 use App\Models\Lesson;
 use App\Models\Room;
@@ -70,7 +71,11 @@ class ScheduleController extends Controller
      */
     public function edit(Schedule $schedule)
     {
-        //
+        $rooms = Room::all();
+        $groups = Group::all();
+        $teachers = Teacher::all();
+        $lessons = Lesson::all();
+        return view('schedules.edit', compact('schedule', 'rooms', 'groups', 'teachers', 'lessons'));
     }
 
     /**
@@ -80,9 +85,10 @@ class ScheduleController extends Controller
      * @param  \App\Models\Schedule  $schedule
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Schedule $schedule)
+    public function update(ScheduleRequest $request, Schedule $schedule)
     {
-        //
+        $schedule->update($request->validated());
+        return redirect()->route('schedules.index');
     }
 
     /**
@@ -93,6 +99,7 @@ class ScheduleController extends Controller
      */
     public function destroy(Schedule $schedule)
     {
-        //
+        $schedule->delete();
+        return redirect()->route('schedules.index');
     }
 }

@@ -7,6 +7,7 @@
         <!-- /.card-header -->
         <!-- form start -->
         <form action="{{route('rooms.update', $room->id)}}" method="POST">
+            <input type="hidden" name="id" value="{{$room->id}}">
             @csrf
             @method('PUT')
             <div class="card-body">

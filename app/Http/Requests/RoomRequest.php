@@ -24,7 +24,8 @@ class RoomRequest extends FormRequest
     public function rules()
     {
         return [
-            'name'=>'required|unique:rooms,name',
+            'id'=>'nullable',
+            'name'=>'required|unique:rooms,name'.($this->id !== null ? ','.$this->id:''),
             'seats_count'=>'required|max:4',
             'type'=>'required'
         ];

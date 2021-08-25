@@ -24,7 +24,8 @@ class LessonRequest extends FormRequest
     public function rules()
     {
         return [
-            'name'=>'required|unique:lessons,name',
+            'id'=>'nullable',
+            'name'=>'required|unique:lessons,name'.($this->id !== null ? ','.$this->id :''),
             'short_name'=>'max:20'
         ];
     }
