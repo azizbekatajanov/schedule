@@ -45,16 +45,16 @@ class TeacherController extends Controller
         return redirect()->route('teachers.index');
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\Models\Teacher  $teacher
-     * @return \Illuminate\Http\Response
-     */
-    public function show(Teacher $teacher)
-    {
-        return view('teachersview.show', compact('teacher'));
-    }
+//    /**
+//     * Display the specified resource.
+//     *
+//     * @param  \App\Models\Teacher  $teacher
+//     * @return \Illuminate\Http\Response
+//     */
+//    public function show(Teacher $teacher)
+//    {
+//
+//    }
 
     /**
      * Show the form for editing the specified resource.

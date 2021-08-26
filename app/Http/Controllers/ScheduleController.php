@@ -52,16 +52,16 @@ class ScheduleController extends Controller
 
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\Models\Schedule  $schedule
-     * @return \Illuminate\Http\Response
-     */
-    public function show(Schedule $schedule)
-    {
-        //
-    }
+//    /**
+//     * Display the specified resource.
+//     *
+//     * @param  \App\Models\Schedule  $schedule
+//     * @return \Illuminate\Http\Response
+//     */
+//    public function show(Schedule $schedule)
+//    {
+//        //
+//    }
 
     /**
      * Show the form for editing the specified resource.

@@ -44,16 +44,16 @@ class LessonController extends Controller
         return redirect()->route('lessons.index')->with('Success');
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\Models\Lesson  $lesson
-     * @return \Illuminate\Http\Response
-     */
-    public function show(Lesson $lesson)
-    {
-        //
-    }
+//    /**
+//     * Display the specified resource.
+//     *
+//     * @param  \App\Models\Lesson  $lesson
+//     * @return \Illuminate\Http\Response
+//     */
+//    public function show(Lesson $lesson)
+//    {
+//        //
+//    }
 
     /**
      * Show the form for editing the specified resource.

@@ -36,4 +36,9 @@ class HomeController extends Controller
 
         return view('homepage', compact('schedule', 'teachers', 'groups', 'rooms'));
     }
+
+    public function dashboard()
+    {
+        return view('dashboard');
+    }
 }
